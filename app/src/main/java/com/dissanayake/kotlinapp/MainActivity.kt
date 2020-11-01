@@ -1,5 +1,6 @@
 package com.dissanayake.kotlinapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -23,9 +24,13 @@ class MainActivity : AppCompatActivity(){
             Log.i("MainActivity", "Future is near")
 
             // show message in the screen
-
             Toast.makeText(this, "Future is near", Toast.LENGTH_SHORT).show()
-
+        }
+        btnSendMessage.setOnClickListener {
+            val message : String = edUserMessage.text.toString()
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("user_message", message)
+            startActivity(intent)
         }
     }
 }
