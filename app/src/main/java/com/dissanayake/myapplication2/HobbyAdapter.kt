@@ -1,4 +1,4 @@
-package com.dissanayake.kotlinapp
+package com.dissanayake.myapplication2
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_item.view.*
 
-class HobbyAdapter(val context: Context,val hobbies : List<Hobby>) : RecyclerView.Adapter<HobbyAdapter.MyViewHolder>() {
 
+class HobbyAdapter(val context: Context, val hobbies : List<Hobby>): RecyclerView.Adapter<HobbyAdapter.MyViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
         return MyViewHolder(view)

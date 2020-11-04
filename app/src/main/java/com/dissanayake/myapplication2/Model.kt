@@ -1,4 +1,4 @@
-package com.dissanayake.kotlinapp
+package com.dissanayake.myapplication2
 
 data class Hobby(var title: String)
 
