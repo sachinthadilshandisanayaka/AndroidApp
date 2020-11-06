@@ -13,6 +13,10 @@ class HobbiesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hobbies)
 
+        setUpRecycleView()
+    }
+
+    private fun setUpRecycleView() {
         val layoutManager = LinearLayoutManager(this)
         layoutManager.orientation = LinearLayoutManager.VERTICAL
         recycleView.layoutManager = layoutManager

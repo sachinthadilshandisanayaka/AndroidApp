@@ -9,10 +9,11 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.dissanayake.myapplication2.models.Hobby
 import com.dissanayake.myapplication2.R
+import com.dissanayake.myapplication2.showToast
 import kotlinx.android.synthetic.main.list_item.view.*
 
 
-class HobbyAdapter(val context: Context, val hobbies : List<Hobby>): RecyclerView.Adapter<HobbyAdapter.MyViewHolder>(){
+class HobbyAdapter(val context: Context, private val hobbies : List<Hobby>): RecyclerView.Adapter<HobbyAdapter.MyViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false)
         return MyViewHolder(view)
@@ -34,6 +35,10 @@ class HobbyAdapter(val context: Context, val hobbies : List<Hobby>): RecyclerVie
 
         init {
             itemView.setOnClickListener {
+                // Toast function in "Activity" method.
+                // But this function in "Adapter" class
+                // So, we need to convert adapter to Action
+                context.showToast(currentHobby!!.title+ " Clicked !")
                 Toast.makeText(context, currentHobby!!.title+ " Clicked !", Toast.LENGTH_SHORT).show()
             }
             itemView.imgShare.setOnClickListener {
@@ -53,17 +58,3 @@ class HobbyAdapter(val context: Context, val hobbies : List<Hobby>): RecyclerVie
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

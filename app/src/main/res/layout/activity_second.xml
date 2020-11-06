@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -8,11 +8,11 @@
         android:id="@+id/textUserMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="30sp"
-        android:textColor="#00CFBC"
-        android:textAlignment="center"
+        android:layout_margin="20dp"
         android:gravity="center_horizontal"
-        android:layout_margin="20dp"/>
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#00CFBC"
+        android:textSize="30sp" />
 
 </LinearLayout>

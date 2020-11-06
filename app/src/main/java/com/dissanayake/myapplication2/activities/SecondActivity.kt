@@ -5,6 +5,7 @@ import android.os.PersistableBundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.dissanayake.myapplication2.R
+import com.dissanayake.myapplication2.showToast
 import kotlinx.android.synthetic.main.activity_second.*
 
 // inherit
@@ -15,7 +16,7 @@ class SecondActivity : AppCompatActivity() {
         setContentView(R.layout.activity_second)
         val bundle : Bundle? = intent.extras
         val message = bundle!!.getString("user_message")
-        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
+        showToast(message.toString())
 
         textUserMessage.text = message
     }

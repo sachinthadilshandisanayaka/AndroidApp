@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import com.dissanayake.myapplication2.R
+import com.dissanayake.myapplication2.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             Log.i("MainActivity", "Future is near")
 
             // show message in the screen
-            Toast.makeText(this, "Future is near", Toast.LENGTH_SHORT).show()
+            showToast("Future is near")
         }
         btnSendMessage.setOnClickListener {
             val message : String = edUserMessage.text.toString()
