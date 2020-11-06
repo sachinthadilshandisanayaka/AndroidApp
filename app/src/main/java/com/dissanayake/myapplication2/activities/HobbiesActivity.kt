@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.dissanayake.myapplication2.adapters.HobbyAdapter
 import com.dissanayake.myapplication2.R
-import com.dissanayake.myapplication2.Supplier
+import com.dissanayake.myapplication2.models.Supplier
 import kotlinx.android.synthetic.main.activity_hobbies.*
 
 class HobbiesActivity : AppCompatActivity() {

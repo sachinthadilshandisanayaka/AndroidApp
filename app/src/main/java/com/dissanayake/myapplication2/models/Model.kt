@@ -1,4 +1,4 @@
-package com.dissanayake.myapplication2
+package com.dissanayake.myapplication2.models
 
 data class Hobby(var title: String)
 
