@@ -1,4 +1,4 @@
-package com.dissanayake.myapplication2
+package com.dissanayake.myapplication2.adapters
 
 import android.content.Context
 import android.content.Intent
@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.activity_main.*
+import com.dissanayake.myapplication2.Hobby
+import com.dissanayake.myapplication2.R
 import kotlinx.android.synthetic.main.list_item.view.*
 
 

@@ -1,10 +1,11 @@
-package com.dissanayake.myapplication2
+package com.dissanayake.myapplication2.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.dissanayake.myapplication2.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

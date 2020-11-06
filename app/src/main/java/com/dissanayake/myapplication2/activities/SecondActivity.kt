@@ -1,9 +1,10 @@
-package com.dissanayake.myapplication2
+package com.dissanayake.myapplication2.activities
 
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.dissanayake.myapplication2.R
 import kotlinx.android.synthetic.main.activity_second.*
 
 // inherit
