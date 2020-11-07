@@ -5,11 +5,19 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.dissanayake.myapplication2.AppConstant
 import com.dissanayake.myapplication2.R
 import com.dissanayake.myapplication2.showToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        // this return "MainActivity" string
+        // class name return
+        val TAG:String = MainActivity::class.java.simpleName
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // R is predefine class
@@ -19,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         futureButton.setOnClickListener {
             // code
             // we can see this msg in cmd as MainActivity child msg
-            Log.i("MainActivity", "Future is near")
+            Log.i(TAG, "Future is near")
 
             // show message in the screen
             showToast("Future is near")
@@ -27,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         btnSendMessage.setOnClickListener {
             val message : String = edUserMessage.text.toString()
             val intent = Intent(this, SecondActivity::class.java)
-            intent.putExtra("user_message", message)
+            intent.putExtra(AppConstant.USER_MSG_KEY, message)
             startActivity(intent)
         }
         btnShareData.setOnClickListener {

@@ -9,10 +9,13 @@ import com.dissanayake.myapplication2.models.Supplier
 import kotlinx.android.synthetic.main.activity_hobbies.*
 
 class HobbiesActivity : AppCompatActivity() {
+    companion object {
+        // this return "HobbiesActivity" string
+        val TAG:String = HobbiesActivity::class.java.simpleName
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_hobbies)
-
         setUpRecycleView()
     }
 
@@ -22,6 +25,7 @@ class HobbiesActivity : AppCompatActivity() {
         recycleView.layoutManager = layoutManager
 
         val adapter = HobbyAdapter(this, Supplier.hobbies)
+        // id name in activity_hobbies
         recycleView.adapter = adapter
     }
 }
