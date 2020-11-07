@@ -15,9 +15,10 @@ class SecondActivity : AppCompatActivity() {
         // append layout
         setContentView(R.layout.activity_second)
         val bundle : Bundle? = intent.extras
-        val message = bundle!!.getString("user_message")
-        showToast(message.toString())
-
-        textUserMessage.text = message
+        bundle?.let {
+            val message = it.getString("user_message")
+            showToast(message.toString())
+            textUserMessage.text = message
+        }
     }
 }

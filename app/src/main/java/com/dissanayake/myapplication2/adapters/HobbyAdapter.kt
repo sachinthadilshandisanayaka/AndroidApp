@@ -35,26 +35,32 @@ class HobbyAdapter(val context: Context, private val hobbies : List<Hobby>): Rec
 
         init {
             itemView.setOnClickListener {
-                // Toast function in "Activity" method.
-                // But this function in "Adapter" class
-                // So, we need to convert adapter to Action
-                context.showToast(currentHobby!!.title+ " Clicked !")
-                Toast.makeText(context, currentHobby!!.title+ " Clicked !", Toast.LENGTH_SHORT).show()
+                currentHobby?.let {
+                    // Toast function in "Activity" method.
+                    // But this function in "Adapter" class
+                    // So, we need to convert adapter to Action
+                    context.showToast(it.title+ " Clicked !")
+                    Toast.makeText(context, it.title+ " Clicked !", Toast.LENGTH_SHORT).show()
+                }
             }
             itemView.imgShare.setOnClickListener {
-                val message : String = "My hobby is : " + currentHobby!!.title
-                val intent = Intent()
-                intent.action = Intent.ACTION_SEND
-                intent.putExtra(Intent.EXTRA_TEXT, message)
-                intent.type = "text/plain"
-                context.startActivity(Intent.createChooser(intent, "Share to :"))
+                currentHobby?.let {
+                    val message : String = "My hobby is : " + it.title
+                    val intent = Intent()
+                    intent.action = Intent.ACTION_SEND
+                    intent.putExtra(Intent.EXTRA_TEXT, message)
+                    intent.type = "text/plain"
+                    context.startActivity(Intent.createChooser(intent, "Share to :"))
+                }
             }
         }
 
         fun setData(hobby : Hobby, pos: Int) {
-            itemView.textTitle.text = hobby!!.title
-            this.currentHobby = hobby
-            this.currentPosition = pos
+            hobby?.let {
+                itemView.textTitle.text = it.title
+                this.currentHobby = it
+                this.currentPosition = pos
+            }
         }
     }
 }
