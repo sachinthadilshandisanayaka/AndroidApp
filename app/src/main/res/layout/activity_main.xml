@@ -12,7 +12,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="87dp"
-        android:text="List View" />
+        android:text="@string/btn_view_list" />
 
     <EditText
         android:id="@+id/edUserMessage"
@@ -32,14 +32,14 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="416dp"
-        android:text="Send" />
+        android:text="@string/btn_send" />
 
     <Button
         android:id="@+id/btnShareData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Share Data" />
+        android:text="@string/btn_share_data" />
 
     <Button
         android:id="@+id/futureButton"
@@ -48,5 +48,5 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="46dp"
-        android:text="Future" />
+        android:text="@string/btn_see_future" />
 </RelativeLayout>

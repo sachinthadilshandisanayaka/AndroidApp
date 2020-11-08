@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">My Application2</string>
+
+    <string name="btn_see_future">See Future</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_share_data">Share Data</string>
+    <string name="btn_view_list">View the List</string>
 </resources>
