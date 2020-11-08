@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_see_future">Voir le futur</string>
+    <string name="btn_send">Envoyer</string>
+    <string name="btn_share_data">Partager des données</string>
+    <string name="btn_view_list">Voir la liste</string>
+    <string name="future_is_near">L\'avenir est proche</string>
+
+</resources>

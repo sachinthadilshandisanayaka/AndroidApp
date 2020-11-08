@@ -30,7 +30,8 @@ class MainActivity : AppCompatActivity() {
             Log.i(TAG, "Future is near")
 
             // show message in the screen
-            showToast("Future is near")
+            // get string in another file
+            showToast(resources.getString(R.string.future_is_near))
         }
         btnSendMessage.setOnClickListener {
             val message : String = edUserMessage.text.toString()
